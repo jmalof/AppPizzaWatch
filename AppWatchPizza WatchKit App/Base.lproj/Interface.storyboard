@@ -253,7 +253,7 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="xa4-PG-Hc6">
                             <items>
-                                <label width="1" alignment="left" text="Resumen del pedido" textAlignment="center" numberOfLines="10" id="YcM-nv-fBj"/>
+                                <label width="1" alignment="left" text="Resumen del pedido" textAlignment="center" numberOfLines="20" id="YcM-nv-fBj"/>
                                 <button width="1" alignment="left" title="Confirmar" id="wl6-M2-s1N">
                                     <color key="backgroundColor" red="0.28603389480000002" green="0.59334520729999995" blue="0.090592695690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
@@ -283,7 +283,7 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="D66-XI-ttS">
                             <items>
-                                <label width="1" alignment="left" text="Realizado!!" textAlignment="center" numberOfLines="10" id="d4O-uO-s7O"/>
+                                <label width="1" alignment="left" text="Realizado!!" textAlignment="center" numberOfLines="20" id="d4O-uO-s7O"/>
                                 <button width="1" alignment="left" title="Genial!!" id="4Kd-I6-cKy">
                                     <color key="backgroundColor" red="0.28603389480000002" green="0.59334520729999995" blue="0.090592695690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>

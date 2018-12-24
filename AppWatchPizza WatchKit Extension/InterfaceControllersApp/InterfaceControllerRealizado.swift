@@ -18,7 +18,7 @@ class InterfaceControllerRealizado: WKInterfaceController {
         super.awake(withContext: context)
         self.pedido = (context as! Pedido)
         
-        self.textViewRealizado.setText(self.pedido?.toString())
+        self.textViewRealizado.setText("Pedido realizado con éxito!! \n"+((self.pedido?.toString())!))
         // Configure interface objects here.
     }
 
