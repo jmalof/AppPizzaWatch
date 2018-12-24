@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Inicio-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AppWatchPizza_WatchKit_App" customModuleProvider="target">
+                <controller identifier="pushMain" title="Inicio" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AppWatchPizza_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" radius="0.0" id="MDB-rD-EDr">
                             <items>
@@ -27,17 +27,14 @@
                             </items>
                         </group>
                     </items>
-                    <connections>
-                        <segue destination="KZL-fa-bgP" kind="relationship" relationship="nextPage" id="BZA-sS-PQn"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="158" y="14"/>
         </scene>
-        <!--Interface Controller Tamanio-->
+        <!--Tamaño-->
         <scene sceneID="lUw-6S-uod">
             <objects>
-                <controller id="KZL-fa-bgP" customClass="InterfaceControllerTamanio" customModule="AppWatchPizza">
+                <controller identifier="pushToTamanio" title="Tamaño" id="KZL-fa-bgP" customClass="InterfaceControllerTamanio" customModule="AppWatchPizza_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="yHd-fA-xN3">
                             <items>
@@ -66,17 +63,14 @@
                             </items>
                         </group>
                     </items>
-                    <connections>
-                        <segue destination="Wf3-9p-B8j" kind="relationship" relationship="nextPage" id="3Lb-TZ-AL9"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="399" y="14"/>
         </scene>
-        <!--Interface Controller Masa-->
+        <!--Masa-->
         <scene sceneID="Jey-7p-js1">
             <objects>
-                <controller id="Wf3-9p-B8j" customClass="InterfaceControllerMasa" customModule="AppWatchPizza">
+                <controller identifier="pushToMasa" title="Masa" id="Wf3-9p-B8j" customClass="InterfaceControllerMasa" customModule="AppWatchPizza_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="D7o-tn-KLd">
                             <items>
@@ -105,19 +99,16 @@
                             </items>
                         </group>
                     </items>
-                    <connections>
-                        <segue destination="MJP-QE-SiQ" kind="relationship" relationship="nextPage" id="SCY-ew-ALy"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="628" y="14"/>
         </scene>
-        <!--Interface Controller Queso-->
+        <!--Queso-->
         <scene sceneID="anJ-e6-e7q">
             <objects>
-                <controller id="MJP-QE-SiQ" customClass="InterfaceControllerQueso" customModule="AppWatchPizza">
+                <controller identifier="pushToQueso" title="Queso" id="MJP-QE-SiQ" customClass="InterfaceControllerQueso" customModule="AppWatchPizza_WatchKit_Extension">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="6Zi-4h-fy3">
+                        <group width="1" alignment="left" layout="vertical" id="6Zi-4h-fy3">
                             <items>
                                 <label width="1" alignment="left" text="Queso" textAlignment="center" id="F3o-jd-RTf"/>
                                 <button width="1" alignment="left" title="Mozarella" id="fZw-AA-IBU">
@@ -155,12 +146,12 @@
             </objects>
             <point key="canvasLocation" x="859" y="14"/>
         </scene>
-        <!--Interface Controller Ingredientes-->
+        <!--Ingredientes-->
         <scene sceneID="tFV-jn-cKf">
             <objects>
-                <controller id="bMf-sE-2O3" customClass="InterfaceControllerIngredientes" customModule="AppWatchPizza">
+                <controller identifier="pushToIngredientes" title="Ingredientes" id="bMf-sE-2O3" customClass="InterfaceControllerIngredientes" customModule="AppWatchPizza_WatchKit_Extension">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="pMW-CI-vzW">
+                        <group width="1" alignment="left" layout="vertical" id="pMW-CI-vzW">
                             <items>
                                 <label width="1" alignment="left" text="Ingredientes" textAlignment="center" id="Jj0-4b-eFW"/>
                                 <button width="1" alignment="left" title="Jamón" id="i8r-7i-Oo1">
@@ -226,6 +217,16 @@
                                         <action selector="selectAnchoa" destination="bMf-sE-2O3" id="JgH-36-sFu"/>
                                     </connections>
                                 </button>
+                                <group alignment="center" layout="vertical" id="dFM-Wg-XDN">
+                                    <items>
+                                        <button width="1" alignment="left" title="Enviar" id="5UG-cl-Lfm">
+                                            <color key="backgroundColor" red="0.28603389478369479" green="0.59334520725388606" blue="0.090592695686974617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="clickEnviar" destination="bMf-sE-2O3" id="Rm4-b2-03b"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
@@ -233,6 +234,7 @@
                         <outlet property="btnAceituna" destination="fhL-Qv-xRx" id="TsC-zV-gVg"/>
                         <outlet property="btnAnchoa" destination="SwF-Cu-0XG" id="bV0-aJ-bsx"/>
                         <outlet property="btnCebolla" destination="yjZ-Ok-sfb" id="nQF-Ao-u1X"/>
+                        <outlet property="btnEnviar" destination="5UG-cl-Lfm" id="bH7-7P-rpa"/>
                         <outlet property="btnJamon" destination="i8r-7i-Oo1" id="wvB-Fi-AbG"/>
                         <outlet property="btnPavo" destination="FPH-yN-fif" id="MN3-wh-izX"/>
                         <outlet property="btnPepperoni" destination="LDm-dj-eqO" id="8ta-v5-hVu"/>
@@ -243,6 +245,60 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="1110" y="14"/>
+        </scene>
+        <!--Confirmar-->
+        <scene sceneID="0Re-uk-eWA">
+            <objects>
+                <controller identifier="pushToConfirmar" title="Confirmar" id="m7h-cu-XEi" customClass="InterfaceControllerResultado" customModule="AppWatchPizza_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="xa4-PG-Hc6">
+                            <items>
+                                <label width="1" alignment="left" text="Resumen del pedido" textAlignment="center" numberOfLines="10" id="YcM-nv-fBj"/>
+                                <button width="1" alignment="left" title="Confirmar" id="wl6-M2-s1N">
+                                    <color key="backgroundColor" red="0.28603389480000002" green="0.59334520729999995" blue="0.090592695690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="clickEnviar" destination="m7h-cu-XEi" id="yPu-c2-bSq"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Reiniciar" id="o0R-k5-riV">
+                                    <color key="backgroundColor" red="0.64068571890000003" green="0.082635503159999998" blue="0.033629950979999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="clickReiniciar" destination="m7h-cu-XEi" id="BmH-al-595"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="textViewConfrimar" destination="YcM-nv-fBj" id="tXV-Zo-cOx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1357" y="-4"/>
+        </scene>
+        <!--Realizado-->
+        <scene sceneID="h3q-JG-dwy">
+            <objects>
+                <controller identifier="pushToRealizado" title="Realizado" id="1gM-xb-ZGe" customClass="InterfaceControllerRealizado" customModule="AppWatchPizza_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="D66-XI-ttS">
+                            <items>
+                                <label width="1" alignment="left" text="Realizado!!" textAlignment="center" numberOfLines="10" id="d4O-uO-s7O"/>
+                                <button width="1" alignment="left" title="Genial!!" id="4Kd-I6-cKy">
+                                    <color key="backgroundColor" red="0.28603389480000002" green="0.59334520729999995" blue="0.090592695690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="clickGenial" destination="1gM-xb-ZGe" id="bTy-Df-dmf"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="textViewRealizado" destination="d4O-uO-s7O" id="kqs-g4-fuH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1616" y="-4"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

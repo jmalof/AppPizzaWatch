@@ -23,10 +23,11 @@ class InterfaceControllerIngredientes: WKInterfaceController {
     @IBOutlet weak var btnPinia: WKInterfaceButton!
     @IBOutlet weak var btnAnchoa: WKInterfaceButton!
     
+    @IBOutlet weak var btnEnviar: WKInterfaceButton!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        self.pedido = (context as! Pedido)
         // Configure interface objects here.
     }
     @IBAction func selectJamon() {
@@ -66,17 +67,13 @@ class InterfaceControllerIngredientes: WKInterfaceController {
     @IBAction func selectAnchoa() {
         pedido?.ingredientes.append("Anchoa")
         btnAnchoa.setEnabled(false)
-       
     }
-   
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    @IBAction func clickEnviar() {
+        if self.pedido!.ingredientes.count < 5 {
+            self.btnEnviar.setTitle("Mínimo 5 ingredientes")
+            return
+        }
+        
+        pushController(withName: "pushToConfirmar", context: self.pedido)
     }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
 }

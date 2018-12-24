@@ -11,7 +11,7 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
+    var pedido:Pedido?
     
     
     override func awake(withContext context: Any?) {
@@ -20,17 +20,7 @@ class InterfaceController: WKInterfaceController {
         // Configure interface objects here.
     }
     @IBAction func clickRealizarPedido() {
-        
+        self.pedido = Pedido()
+        pushController(withName: "pushToTamanio", context: self.pedido)
     }
-    
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
 }

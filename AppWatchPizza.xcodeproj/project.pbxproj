@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0050A121D141CF0028D4FE /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C05D3AD21D015E30094F9D5 /* InterfaceController.swift */; };
+		8C0050A221D142190028D4FE /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC554C421D08FEE00BD009A /* Datos.swift */; };
+		8C0050A321D14EC10028D4FE /* InterfaceControllerTamanio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC554BB21D08A6900BD009A /* InterfaceControllerTamanio.swift */; };
+		8C0050A421D14EC50028D4FE /* InterfaceControllerMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC554BD21D08A9600BD009A /* InterfaceControllerMasa.swift */; };
+		8C0050A521D14EC80028D4FE /* InterfaceControllerQueso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC554BF21D08AAA00BD009A /* InterfaceControllerQueso.swift */; };
+		8C0050A621D14ECC0028D4FE /* InterfaceControllerIngredientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC554C121D08ABE00BD009A /* InterfaceControllerIngredientes.swift */; };
+		8C0050A821D161200028D4FE /* InterfaceControllerResultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0050A721D161200028D4FE /* InterfaceControllerResultado.swift */; };
+		8C0050AA21D162F70028D4FE /* InterfaceControllerRealizado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0050A921D162F70028D4FE /* InterfaceControllerRealizado.swift */; };
 		8C05D38B21D015E10094F9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C05D38A21D015E10094F9D5 /* AppDelegate.swift */; };
 		8C05D38D21D015E10094F9D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C05D38C21D015E10094F9D5 /* ViewController.swift */; };
 		8C05D39021D015E10094F9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C05D38E21D015E10094F9D5 /* Main.storyboard */; };
@@ -71,6 +79,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C0050A721D161200028D4FE /* InterfaceControllerResultado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerResultado.swift; sourceTree = "<group>"; };
+		8C0050A921D162F70028D4FE /* InterfaceControllerRealizado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerRealizado.swift; sourceTree = "<group>"; };
 		8C05D38721D015E10094F9D5 /* AppWatchPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWatchPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C05D38A21D015E10094F9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C05D38C21D015E10094F9D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,8 +161,6 @@
 		8C05D39D21D015E30094F9D5 /* AppWatchPizza WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				8CC554C321D08FD900BD009A /* clase */,
-				8CC554BA21D0899500BD009A /* InterfaceControllersApp */,
 				8C05D39E21D015E30094F9D5 /* Interface.storyboard */,
 				8C05D3A121D015E30094F9D5 /* Assets.xcassets */,
 				8C05D3A321D015E30094F9D5 /* Info.plist */,
@@ -163,6 +171,8 @@
 		8C05D3AC21D015E30094F9D5 /* AppWatchPizza WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8CC554BA21D0899500BD009A /* InterfaceControllersApp */,
+				8CC554C321D08FD900BD009A /* clase */,
 				8C05D3AD21D015E30094F9D5 /* InterfaceController.swift */,
 				8C05D3AF21D015E30094F9D5 /* ExtensionDelegate.swift */,
 				8C05D3B121D015E30094F9D5 /* NotificationController.swift */,
@@ -181,6 +191,8 @@
 				8CC554BD21D08A9600BD009A /* InterfaceControllerMasa.swift */,
 				8CC554BF21D08AAA00BD009A /* InterfaceControllerQueso.swift */,
 				8CC554C121D08ABE00BD009A /* InterfaceControllerIngredientes.swift */,
+				8C0050A721D161200028D4FE /* InterfaceControllerResultado.swift */,
+				8C0050A921D162F70028D4FE /* InterfaceControllerRealizado.swift */,
 			);
 			path = InterfaceControllersApp;
 			sourceTree = "<group>";
@@ -327,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C05D38D21D015E10094F9D5 /* ViewController.swift in Sources */,
+				8C0050A121D141CF0028D4FE /* InterfaceController.swift in Sources */,
 				8CC554BC21D08A6900BD009A /* InterfaceControllerTamanio.swift in Sources */,
 				8CC554C221D08ABE00BD009A /* InterfaceControllerIngredientes.swift in Sources */,
 				8C05D38B21D015E10094F9D5 /* AppDelegate.swift in Sources */,
@@ -340,10 +353,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0050A221D142190028D4FE /* Datos.swift in Sources */,
 				8C05D3B221D015E30094F9D5 /* NotificationController.swift in Sources */,
+				8C0050A421D14EC50028D4FE /* InterfaceControllerMasa.swift in Sources */,
+				8C0050A521D14EC80028D4FE /* InterfaceControllerQueso.swift in Sources */,
 				8C05D3B421D015E30094F9D5 /* ComplicationController.swift in Sources */,
 				8C05D3B021D015E30094F9D5 /* ExtensionDelegate.swift in Sources */,
+				8C0050A321D14EC10028D4FE /* InterfaceControllerTamanio.swift in Sources */,
+				8C0050A821D161200028D4FE /* InterfaceControllerResultado.swift in Sources */,
 				8C05D3AE21D015E30094F9D5 /* InterfaceController.swift in Sources */,
+				8C0050A621D14ECC0028D4FE /* InterfaceControllerIngredientes.swift in Sources */,
+				8C0050AA21D162F70028D4FE /* InterfaceControllerRealizado.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
